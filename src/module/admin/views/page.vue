@@ -1,16 +1,26 @@
 <template>
   <div id="page">
-    <div class="menu"><nav-menu/></div>
-    <div class="container"><router-view/></div>
+    <nav-header/>
+    <main>
+      <nav-menu/>
+      <section>
+        <router-view :style="{flex: 1}"/>
+        <nav-footer/>
+      </section>
+    </main>
   </div>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
+import NavHeader from '../components/NavHeader.vue'
 import NavMenu from '../components/NavMenu.vue'
+import NavFooter from '../components/NavFooter.vue'
 
 @Component({
     components: {
-        NavMenu
+      NavHeader,
+      NavMenu,
+      NavFooter
     }
 })
 export default class App extends Vue {}
@@ -20,11 +30,18 @@ export default class App extends Vue {}
 #page
   min-height: 100vh
   display flex
+  flex-direction column
+
+main
+  display flex
   flex-direction row
-.menu
-  width: 10rem
-  border-right: 1px solid #cfd4db
-.container
-  padding: .5rem
-  width: 100%
+  flex 1
+  width 100%
+  section
+    display flex
+    flex-direction column
+    width 100%
+    footer
+      height 3rem
+      width 100%
 </style>

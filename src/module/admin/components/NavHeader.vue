@@ -1,8 +1,6 @@
 <template>
-    <div id="navHeader">
-        <header>
-        </header>
-    </div>
+    <header id="navHeader">
+    </header>
 </template>
 
 <script lang="ts">
@@ -19,13 +17,8 @@ export default class NavMenu extends Vue {
 </script>
 
 <style lang="stylus" scoped>
-ul
-    list-style none
-    display flex
-    flex-direction column
-    margin 0
-    padding 0
-    text-align center
-    li
-        padding 0.5rem
+header
+    height 3rem
+    width 100%
+    box-shadow 0 2px 4px 0 rgba(0,0,0,.2)
 </style>

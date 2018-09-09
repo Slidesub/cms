@@ -1,15 +1,13 @@
 <template>
-    <div class="index">
-        <section>
-            <h1 :style="{textAlign: 'center'}">Welcome to unicome.org</h1>
-            <article>
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                </ul>
-            </article>
-        </section>
-    </div>
+    <section>
+        <h1 :style="{textAlign: 'center'}">Welcome to unicome.org</h1>
+        <article>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+            </ul>
+        </article>
+    </section>
 </template>
 
 <script lang="ts">

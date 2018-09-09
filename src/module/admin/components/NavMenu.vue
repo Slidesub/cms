@@ -1,16 +1,14 @@
 <template>
-    <div id="navMenu">
-        <aside>
-            <ul>
-                <li><img src="" alt=""></li>
-            </ul>
-            <ul>
-                <li v-for="(application, index) of applications" :key="index">
-                    <a :href="application.path">{{application.tag}}</a>
-                </li>
-            </ul>
-        </aside>
-    </div>
+    <aside id="navMenu">
+        <ul>
+            <li><img src="" alt=""></li>
+        </ul>
+        <ul>
+            <li v-for="(application, index) of applications" :key="index">
+                <a :href="application.path">{{application.tag}}</a>
+            </li>
+        </ul>
+    </aside>
 </template>
 
 <script lang="ts">
@@ -27,6 +25,9 @@ export default class NavMenu extends Vue {
 </script>
 
 <style lang="stylus" scoped>
+#navMenu
+    width 10rem
+    border-right: 1px solid #cfd4db
 ul
     list-style none
     display flex
